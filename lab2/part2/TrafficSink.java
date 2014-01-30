@@ -34,7 +34,7 @@ public class TrafficSink {
     finally {
         System.out.println(port);    
         DatagramSocket socket = new DatagramSocket(port);
-        byte[] buf = new byte[256];
+        byte[] buf = new byte[512];
         DatagramPacket packet = new DatagramPacket(buf, buf.length);
         System.out.println("Waiting ..."); 
         

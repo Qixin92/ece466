@@ -88,5 +88,5 @@ hkeg1= legend(h1,'number of tokens','backlog');
 
 title('Token Bucket (bucket.3.2.txt)');
 xlabel('time (in microseconds)');
-ylabel('backlog (in bytes)');
+ylabel('token bucket and backlog');
 

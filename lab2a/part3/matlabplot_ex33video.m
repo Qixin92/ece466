@@ -97,3 +97,8 @@ figure(3);
 h2 = plot(time_array,cumulative_arrival, 'r', time_array2,cumulative_arrival2, 'g', time_array3,cumulative_arrival3, 'b' );
 hold on
 hkeg2 = legend(h2, 'trace file', 'traffic shaper', 'traffic sink');
+title('Video data');
+xlabel('time (in microseconds)');
+ylabel('culmulative arrival (in bytes)');
+
+

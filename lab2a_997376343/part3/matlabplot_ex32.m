@@ -27,7 +27,7 @@ xlabel('time (in microseconds)');
 ylabel('culmulative arrival (in bytes)');
 
 %token bucket output
-[arrival_time, packetsize_p2, back_log, num_of_tokens] = textread('bucket.3.2.txt', '%f %f %f %f');
+[arrival_time, packetsize_p2, back_log, num_of_tokens] = textread('bucket_poisson.txt', '%f %f %f %f');
 time_array2 = zeros(1,50000);
 cumulative_arrival2 = zeros(1,50000);
 
@@ -48,7 +48,7 @@ ylabel('culmulative arrival (in bytes)');
 
 
 %sink output
-[packet_no_p3, packetsize_p3, arrival_time] = textread('TrafficSinkOutput.txt', '%f %f %f');
+[packet_no_p3, packetsize_p3, arrival_time] = textread('TrafficSinkOutput_3.2_poisson.txt', '%f %f %f');
 time_array3 = zeros(1,50000);
 cumulative_arrival3 = zeros(1,50000);
 
@@ -89,4 +89,19 @@ hkeg1= legend(h1,'number of tokens','backlog');
 title('Token Bucket (bucket.3.2.txt)');
 xlabel('time (in microseconds)');
 ylabel('token bucket and backlog');
+
+
+figure(3);
+h2 = plot(time_array,cumulative_arrival, 'r', time_array2,cumulative_arrival2, 'g', time_array3,cumulative_arrival3, 'b' );
+hold on
+hkeg2 = legend(h2, 'trace file', 'traffic shaper', 'traffic sink');
+title('Poisson data');
+xlabel('time (in microseconds)');
+ylabel('culmulative arrival (in bytes)');
+
+
+
+
+
+
 

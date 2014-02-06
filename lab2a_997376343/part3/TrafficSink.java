@@ -40,7 +40,7 @@ public class TrafficSink {
         
         boolean listening = true;
         
-        FileOutputStream fout =  new FileOutputStream("TrafficSinkOutput_3.3_video.txt");
+        FileOutputStream fout =  new FileOutputStream("TrafficSinkOutput_3.2_poisson.txt");
 	    pout = new PrintStream (fout);
 			
 	    int SeqNo = 1;

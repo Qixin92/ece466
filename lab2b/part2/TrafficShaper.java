@@ -33,8 +33,12 @@ class TrafficShaper {
 
         //lab2b
         //experiment 1 - 100 tokens (100 bytes), with a rate of 250000 tokens/s --> 250000 bytes/sec --> 2 Mbps
-        TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 100*65507, 100, 250000, "output_bucket_exp1.txt");
+        //TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 100*65507, 100, 250000, "output_bucket_exp1.txt");
         
+        //experiment 2
+        //size changed from 100 to 500,
+        //rate at 625000 tokens/s --> 1Mbps 
+        TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 100*65507, 500, 125000, "output_bucket_exp2.txt");
 		new Thread(lb).start();
 		
 		 

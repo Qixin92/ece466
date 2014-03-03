@@ -38,7 +38,7 @@ class TrafficGeneratorReference {
 			L_bytes = Integer.parseInt(args[3]);
 
 			//file to write to
-			FileOutputStream fout =  new FileOutputStream("output_gen_exp3.txt");
+			FileOutputStream fout =  new FileOutputStream("output_gen_max.txt");
 			pout = new PrintStream (fout);
 			
 			//initialization

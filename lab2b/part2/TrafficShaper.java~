@@ -48,7 +48,7 @@ class TrafficShaper {
         //excercise 2.4, finding the max
         //100000 is the size of the token bucket 
         //64 Mbps
-        TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 800000000, 10000, 8000000, "output_bucket_max.txt");
+        TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 800000000, 8000, 8000000, "output_bucket_max.txt");
 		new Thread(lb).start();
 		
 		 

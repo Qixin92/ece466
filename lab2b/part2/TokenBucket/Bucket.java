@@ -119,6 +119,6 @@ public class Bucket implements Runnable
         if (waiting_time < 0) {
             waiting_time = 0;
         }
-		return (0);
+		return waiting_time;
 	}
 }

@@ -60,18 +60,23 @@ class TrafficShaper {
         //rate 1473000 to 4473000
         //TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 65507000, 634344,  4473000, "output_bucket_ex31_video.txt");
         
+        //TODO
+        //exercise 3.1 ethernet
+        TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 655070000, 1518,  1000000, "output_bucket_ex31_etheret.txt");
         
         //excercise 3.1 
         //poisson
         //size = 985
         //rate = 126050.. increased to 200000
-        TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 6550700, 5000, 126050, "output_bucket_ex32_poisson.txt");
-        
+        //TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 6550700, 5000, 126050, "output_bucket_ex32_poisson.txt");
         
         //exercise 3.2 video
         //burst 
         //TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 655070000, 50543440,  1473000, "output_bucket_ex32_video.txt");
         
+        //TODO
+        //exercise 3.2 ethernet
+        //TokenBucket lb = new TokenBucket (4444, "localhost", 4445, 65507, 655070000, 166980,  175060, "output_bucket_ex32_etheret.txt");
         
 		new Thread(lb).start();
 		

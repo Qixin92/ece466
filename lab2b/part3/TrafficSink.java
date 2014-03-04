@@ -40,8 +40,8 @@ public class TrafficSink {
         
         boolean listening = true;
         
-        FileOutputStream fout =  new FileOutputStream("output_sink_ex32_poisson.txt");
-        //FileOutputStream fout =  new FileOutputStream("output_sink_ex32_video.txt");
+        FileOutputStream fout =  new FileOutputStream("output_sink_ex31_ethernet.txt");
+        
 	    pout = new PrintStream (fout);
 			
 	    int SeqNo = 1;

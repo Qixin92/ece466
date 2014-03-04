@@ -30,7 +30,7 @@ ylabel('culmulative arrival (in bytes)');
 
 
 %token bucket output
-[arrival_time, packetsize_p2, back_log, num_of_tokens] = textread('output_bucket_ex31_etheret.txt', '%f %f %f %f');
+[arrival_time, packetsize_p2, back_log, num_of_tokens] = textread('output_bucket_ex32_ethernet.txt', '%f %f %f %f');
 time_array2 = zeros(1,50000);
 cumulative_arrival2 = zeros(1,50000);
 
@@ -51,7 +51,7 @@ ylabel('culmulative arrival (in bytes)');
 
 
 %sink output
-[packet_no_p3, packetsize_p3, arrival_time] = textread('output_sink_ex31_ethernet.txt', '%f %f %f');
+[packet_no_p3, packetsize_p3, arrival_time] = textread('output_sink_ex32_ethernet.txt', '%f %f %f');
 time_array3 = zeros(1,50000);
 cumulative_arrival3 = zeros(1,50000);
 

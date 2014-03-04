@@ -38,7 +38,7 @@ class TrafficGeneratorVideo {
             File fin = new File("movietrace.data"); 
 			FileReader fis = new FileReader(fin);  
 			bis = new BufferedReader(fis);  
-			FileOutputStream fout =  new FileOutputStream("output.txt");
+			FileOutputStream fout =  new FileOutputStream("output_gen_ex31_video.txt");
 			pout = new PrintStream (fout);
 			
 
@@ -53,8 +53,10 @@ class TrafficGeneratorVideo {
 			/*
 			send each frame every 33 nanoseconds
 			elapsed time is always 33 ms for the video traffic
+			Lets generate traffic at a factor of 1000 times faster
 			*/
 			float Etime = 33;  //33 microseconds
+			//long time_to_wait = (long) Etime*1000; 
 			long time_to_wait = (long) Etime*1000000; 
 
 

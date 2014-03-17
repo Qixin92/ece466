@@ -42,6 +42,10 @@ class TrafficGeneratorPoissonRescale {
 			int N = Integer.parseInt(args[1]);
 			System.out.println("N is: "+N);
 			
+			//get priority of generator
+			int priority = Integer.parseInt(args[2]);
+			System.out.println("priority is:"+priority);
+			
 			//file handler
             File fin = new File("poisson3.data"); 
 			FileReader fis = new FileReader(fin);  
@@ -81,7 +85,12 @@ class TrafficGeneratorPoissonRescale {
 				//create packet
 				byte [] data = new byte[Fsize];
 				//tag with 1
-				data[0] = (byte)1;
+				if (priority == 1) {
+    				data[0] = (byte)1;
+    			}
+    			else if (priority == 2) {
+    			    data[0] = (byte)2;
+    			}
 				DatagramPacket packet = new DatagramPacket(data, Fsize, addr, 4444);
 				
 				

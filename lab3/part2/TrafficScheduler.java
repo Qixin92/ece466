@@ -44,12 +44,22 @@ class TrafficScheduler {
         "output_scheduler_ex13_N9.txt"); 
         */
        
-     
+       //exercise 2.3
+     /*
      PacketScheduler ps = new PacketScheduler(4444, "localhost", 4445, 
         20000000,    //transmission rate of scheduler is 20 Mbps
         2,          //2 queues
         1024,       //max packet size of 1024 B
         new long [] {100*1024, 100*1024}, //set both to 100*1024 Bytes
+        "output_scheduler.txt"); 
+       */
+       
+       //exercise 2.4
+         PacketScheduler ps = new PacketScheduler(4444, "localhost", 4445, 
+        10000000,    //transmission rate of scheduler is 10 Mbps
+        2,          //2 queues
+        2024,       //max packet size of 1024 B
+        new long [] {1000000*1024, 1000000*1024}, //set both to 100*1024 Bytes
         "output_scheduler.txt"); 
        
         

@@ -89,8 +89,8 @@ public class SchedulerSender implements Runnable {
 		flowSize[2] = 2;
 		
 		int []weight = new int[3];
-		weight[0] = 1;
-		//weight[0] = 3;
+		//weight[0] = 1;
+		weight[0] = 3;
 		weight[1] = 1; 
 		weight[2] = 1;
 

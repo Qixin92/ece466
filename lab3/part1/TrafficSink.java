@@ -21,6 +21,7 @@ public class TrafficSink {
   public static void main(String[] args) throws IOException {
     
     PrintStream pout = null;
+     PrintStream pout2 = null;
     
     //get ip address of TrafficSink
     String receiver_hostname =  InetAddress.getLocalHost().getHostAddress();  
@@ -41,11 +42,14 @@ public class TrafficSink {
         boolean listening = true;
         
         //FileOutputStream fout =  new FileOutputStream("output_sink.txt");
-        FileOutputStream fout =  new FileOutputStream("output_sink_ex1_N9.txt");
+        FileOutputStream fout =  new FileOutputStream("output_sink1.txt");
+        FileOutputStream fout2 =  new FileOutputStream("output_sink2.txt");
         
 	    pout = new PrintStream (fout);
+	    pout2 = new PrintStream (fout2);
 			
 	    int SeqNo = 1;
+	    int SeqNo2 = 1;
 	    long last_receive_time = 0;
         while (listening) {
             socket.receive(packet);
@@ -53,17 +57,28 @@ public class TrafficSink {
             //time to record is the current received time minus the last recieved packet time
             long got_packet_time = System.nanoTime();
             long time_to_record = got_packet_time - last_receive_time;
-            if (SeqNo == 1) time_to_record = 0; 
             last_receive_time = got_packet_time;
             
             //time in microseconds
             time_to_record = time_to_record/1000;
-            pout.println(SeqNo+ "\t"+  packet.getLength() + "\t" + time_to_record); 
-            SeqNo++;
+            
+            //get priority of packet
+            long priority = (long) packet.getData()[0];
+            if (priority == 1) {
+                if (SeqNo == 1) time_to_record = 0;
+                pout.println(SeqNo+ "\t"+  packet.getLength() + "\t" + time_to_record); 
+                SeqNo++;
+            }
+            if (priority == 2) {
+                if (SeqNo2 == 1) time_to_record = 0;
+                pout2.println(SeqNo2+ "\t"+  packet.getLength() + "\t" + time_to_record);
+                SeqNo2++;
+            }
         }
     }
     
     pout.close();
+    pout2.close();
     //System.out.println(p.getAddress().g);
     /*
     String s = new String(p.getData(), 0, p.getLength());

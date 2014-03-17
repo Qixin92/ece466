@@ -35,7 +35,7 @@ class TrafficScheduler {
         // buffer 100kB
         //capacity of link to 10Mbps
      PacketScheduler ps2 = new PacketScheduler(4444, "localhost", 4445, 
-        10000000,    //transmission rate of scheduler is 10 Mbps
+        1000000,    //transmission rate of scheduler is 10 Mbps
         1,          //1 queues
         2024,       //packet size of 2024 so we don't lose any packets due to its packet size
         new long [] {100*1024},  //buffer size of 100 kB

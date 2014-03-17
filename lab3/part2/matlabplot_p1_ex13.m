@@ -14,13 +14,13 @@ time_array = cumsum(arrival_time);
 figure(1);
 subplot(2,1,1);
 plot(time_array, back_log1);
-title('Backlog for Possion (N=1)');
+title('Backlog for Possion (N=5)');
 xlabel('time (in microseconds)');
 ylabel('backlog (in bytes)');
 
 subplot(2,1,2);
 plot(time_array, back_log2);
-title('Backlog for Video (N=1)');
+title('Backlog for Video (N=5)');
 xlabel('time (in microseconds)');
 ylabel('backlog (in bytes)');
 
@@ -58,7 +58,7 @@ while i<=size
 end
 subplot(2,1,1);
 plot(time_array_to_plot,waiting_time1);
-title('Waiting time for Poisson (N=1)');
+title('Waiting time for Poisson (N=5)');
 xlabel('time (in microseconds)');
 ylabel('time (in microseconds)');
 
@@ -95,7 +95,7 @@ while i<=size
 end
 subplot(2,1,2);
 plot(time_array_to_plot2,waiting_time2);
-title('Waiting time for Video (N=1)');
+title('Waiting time for Video (N=5)');
 xlabel('time (in microseconds)');
 ylabel('time (in microseconds)');
 
@@ -119,7 +119,7 @@ end
 figure(3);
 subplot(2,1,1);
 plot (cumsum(time_for_plotting),cumsum(num_of_discard1));
-title('Number of Discarded packets for Poisson (N=1)');
+title('Number of Discarded packets for Poisson (N=5)');
 ylabel('total discarded packets');
 xlabel('time (in microseconds)');
 
@@ -141,6 +141,6 @@ end
 
 subplot(2,1,2);
 plot (cumsum(time_for_plotting2),cumsum(num_of_discard2));
-title('Number of Discarded packets for Video (N=1)');
+title('Number of Discarded packets for Video (N=5)');
 ylabel('total discarded packets');
 xlabel('time (in microseconds)');

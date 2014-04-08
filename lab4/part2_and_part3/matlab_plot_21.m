@@ -3,8 +3,8 @@
 % number of packets + total size of packet train
 %N=5000;
 %L=20000;
-N=2000;
-L=200000;
+N=1000;
+L=100000;
 
 % LSR for arrival function
 arr = polyfit(send/1000,seqNo*L*8/N,1);

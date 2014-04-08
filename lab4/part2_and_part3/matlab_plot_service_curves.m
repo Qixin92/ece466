@@ -1,16 +1,17 @@
 %2.1 blackbox 1
 figure(1);
 x = 1:1:1000;
-y = 10000*(x-20) + 11840;
-
-y1 = 170*(x-100) + 944;
-y2 = 170*(x-100) + 1032;
-y3 = 170*(x-100) + 1232;
 
 
+y1 = 1986*(x-4.5);
+y2 = 1890*(x-4.4) + 8260;
+y3 = 2099*(x-4.5) + 8260;
+y4 = 2190*(x-4.8) + 9987;
+y5 = 2206*(x-3.1) + 3514;
 
-%plot(x,y, x,y1, x,y2, x,y3, x,y4, x,y5, x,y6);
-plot( x,y1, x,y2, x,y3);
+
+plot(x,y1, x,y2, x,y3, x,y4, x,y5);
+
 title('Unknown BlackBox');
 xlabel('time (in milliseconds)');
 ylabel('Data (in bits)');

@@ -1,0 +1,18 @@
+
+i>> matlab_plot_21
+Maximum backlog is 215323 bits at t=266699
+Arrival rate is 2995.97 kbps
+Departure rate is 2206.31 kbps * (t-3.115 ms)+1.077058e+03 bits
+>> matlab_plot_21
+Maximum backlog is 173485 bits at t=291412
+Arrival rate is 2747.61 kbps
+Departure rate is 2189.59 kbps * (t-4.756 ms)+2.168603e+03 bits
+>> matlab_plot_21
+Maximum backlog is 138762 bits at t=317687
+Arrival rate is 2499.88 kbps
+Departure rate is 2099.17 kbps * (t-4.493 ms)+-1.820451e+03 bits
+>> matlab_plot_21
+Maximum backlog is 124256 bits at t=344977
+Arrival rate is 2246.5 kbps
+Departure rate is 1890.33 kbps * (t-4.42 ms)+5.747063e+03 bits
+>> 
